@@ -56,7 +56,7 @@ class TaxonSelectionType extends AbstractType
         $builder->addModelTransformer(new TaxonSelectionToCollectionTransformer($taxonomies));
 
         foreach ($taxonomies as $taxonomy) {
-            $builder->add(Urlizer::urlize($taxonomy->getName()), 'choice', array(
+            $builder->add(md5($taxonomy->getName()), 'choice', array(
                 'choice_list' => new ObjectChoiceList($taxonomy->getTaxonsAsList()),
                 'multiple'    => $options['multiple'],
                 'label'       => /** @Ignore */ $taxonomy->getName()
