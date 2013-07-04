@@ -11,7 +11,6 @@
 
 namespace Sylius\Bundle\TaxonomiesBundle\Form\Type;
 
-use Gedmo\Sluggable\Util\Urlizer;
 use Sylius\Bundle\ResourceBundle\Model\RepositoryInterface;
 use Sylius\Bundle\TaxonomiesBundle\Form\DataTransformer\TaxonSelectionToCollectionTransformer;
 use Symfony\Component\Form\AbstractType;
