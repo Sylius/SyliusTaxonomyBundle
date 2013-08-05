@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+ This file is part of the Sylius package.
+
+ (c) Paweł Jędrzejewski
+
+ For the full copyright and license information, please view the LICENSE
+ file that was distributed with this source code.
+
+-->
+
+<doctrine-mongo-mapping xmlns="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping
+                                      http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping.xsd"
+                  xmlns:gedmo="http://gediminasm.org/schemas/orm/doctrine-extensions-mapping">
+
+    <mapped-superclass name="Sylius\Bundle\TaxonomiesBundle\Document\DefaultTaxon" collection="sylius_taxon" repository-class="Gedmo\Tree\Document\MongoDB\Repository\MaterializedPathRepository">
+        <field name="id" id="true">
+            <gedmo:tree-path-source/>
+        </field>
+        <field name="path" type="string">
+            <gedmo:tree-path separator="/"/>
+        </field>
+        <field name="lockTime" type="date" />
+        <reference-one field="taxonomy" target-document="Sylius\Bundle\TaxonomiesBundle\Document\DefaultTaxonomy" />
+        <reference-one field="parent" target-document="Sylius\Bundle\TaxonomiesBundle\Document\DefaultTaxon" >
+            <cascade>
+                <detach />
+            </cascade>
+            <gedmo:tree-parent/>
+        </reference-one>
+        <reference-many field="children" target-document="Sylius\Bundle\TaxonomiesBundle\Document\DefaultTaxon" />
+        <gedmo:tree type="materializedPath" activateLocking="true" />
+        <indexes>
+            <index>
+                <key name="path" order="asc" />
+            </index>
+        </indexes>
+    </mapped-superclass>
+</doctrine-mongo-mapping>
