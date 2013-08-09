@@ -27,4 +27,12 @@ class TaxonomyEntityChoiceType extends AbstractType
     {
         return 'entity';
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getName()
+    {
+        return 'sylius_taxononmy_entity_choice';
+    }
 }
