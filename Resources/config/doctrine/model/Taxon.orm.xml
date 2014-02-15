@@ -50,8 +50,8 @@
                 <cascade-all />
             </cascade>
             <order-by>
-            <order-by-field name="left" direction="ASC" />
-        </order-by>
+                <order-by-field name="left" direction="ASC" />
+            </order-by>
         </one-to-many>
 
         <order-by>
