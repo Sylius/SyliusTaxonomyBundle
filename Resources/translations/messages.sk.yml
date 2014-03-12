@@ -4,6 +4,6 @@
 sylius:
   form:
     taxon:
-      name: Ime
+      name: Názov
     taxonomy:
-      name: Ime
+      name: Názov
