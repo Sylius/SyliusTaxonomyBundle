@@ -25,6 +25,8 @@
 
 {% macro tree(taxonomy, taxons) %}
 
+{% import 'SyliusResourceBundle:Macros:buttons.html.twig' as buttons %}
+
 {% for taxon in taxons %}
 <tr>
     <td>
