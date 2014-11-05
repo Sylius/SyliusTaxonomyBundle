@@ -15,12 +15,11 @@ use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 /**
- * Taxonomy form form.
+ * Taxon translation form type.
  *
- * @author Paweł Jędrzejewski <pawel@sylius.org>
  * @author Gonzalo Vilaseca <gvilaseca@reiss.co.uk>
  */
-class TaxonomyType extends AbstractResourceType
+class TaxonTranslationType extends AbstractResourceType
 {
     /**
      * {@inheritdoc}
@@ -28,10 +27,18 @@ class TaxonomyType extends AbstractResourceType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('translations', 'a2lix_translationsForms', array(
-                // TODO Form as a service?
-                'form_type' => new TaxonomyTranslationType($this->dataClass.'Translation', $this->validationGroups),
-                'label'    => 'sylius.form.taxonomy.name'
+            ->add('name', 'text', array(
+                'label' => 'sylius.form.taxon.name'
+            ))
+
+            ->add('permalink', 'text', array(
+                'required' => false,
+                'label' => 'sylius.form.taxon.permalink'
+            ))
+
+            ->add('description', 'text', array(
+                'required' => false,
+                'label' => 'sylius.form.taxon.description'
             ))
         ;
     }
@@ -41,6 +48,6 @@ class TaxonomyType extends AbstractResourceType
      */
     public function getName()
     {
-        return 'sylius_taxonomy';
+        return 'sylius_taxon_translation';
     }
 }

@@ -17,19 +17,18 @@ use Symfony\Component\Form\FormBuilder;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
- * @author Paweł Jędrzejewski <pawel@sylius.org>
  * @author Gonzalo Vilaseca <gvilaseca@reiss.co.uk>
  */
-class TaxonomyTypeSpec extends ObjectBehavior
+class TaxonomyTranslationTypeSpec extends ObjectBehavior
 {
     function let()
     {
-        $this->beConstructedWith('Taxonomy', array('sylius'));
+        $this->beConstructedWith('TaxonomyTranslation', array('sylius'));
     }
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Sylius\Bundle\TaxonomyBundle\Form\Type\TaxonomyType');
+        $this->shouldHaveType('Sylius\Bundle\TaxonomyBundle\Form\Type\TaxonomyTranslationType');
     }
 
     function it_is_a_form_type()
@@ -40,7 +39,7 @@ class TaxonomyTypeSpec extends ObjectBehavior
     function it_builds_form_with_proper_fields(FormBuilder $builder)
     {
         $builder
-            ->add('translations', 'a2lix_translationsForms', Argument::any())
+            ->add('name', 'text', Argument::any())
             ->willReturn($builder)
         ;
 
@@ -51,7 +50,7 @@ class TaxonomyTypeSpec extends ObjectBehavior
     {
         $resolver
             ->setDefaults(array(
-                'data_class'        => 'Taxonomy',
+                'data_class'        => 'TaxonomyTranslation',
                 'validation_groups' => array('sylius'),
             ))
             ->shouldBeCalled()

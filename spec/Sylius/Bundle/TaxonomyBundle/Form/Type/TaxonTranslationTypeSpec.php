@@ -14,22 +14,22 @@ namespace spec\Sylius\Bundle\TaxonomyBundle\Form\Type;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Symfony\Component\Form\FormBuilder;
+use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
- * @author Paweł Jędrzejewski <pawel@sylius.org>
  * @author Gonzalo Vilaseca <gvilaseca@reiss.co.uk>
  */
-class TaxonomyTypeSpec extends ObjectBehavior
+class TaxonTranslationTypeSpec extends ObjectBehavior
 {
     function let()
     {
-        $this->beConstructedWith('Taxonomy', array('sylius'));
+        $this->beConstructedWith('TaxonTranslation', array('sylius'));
     }
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Sylius\Bundle\TaxonomyBundle\Form\Type\TaxonomyType');
+        $this->shouldHaveType('Sylius\Bundle\TaxonomyBundle\Form\Type\TaxonTranslationType');
     }
 
     function it_is_a_form_type()
@@ -37,21 +37,35 @@ class TaxonomyTypeSpec extends ObjectBehavior
         $this->shouldImplement('Symfony\Component\Form\FormTypeInterface');
     }
 
-    function it_builds_form_with_proper_fields(FormBuilder $builder)
-    {
+    function it_builds_form_with_proper_fields(
+        FormBuilder $builder,
+        FormFactoryInterface $factory
+    ) {
+        $builder->getFormFactory()->willReturn($factory);
+
         $builder
-            ->add('translations', 'a2lix_translationsForms', Argument::any())
+            ->add('name', 'text', Argument::any())
+            ->willReturn($builder)
+        ;
+
+        $builder
+            ->add('permalink', 'text', Argument::any())
+            ->willReturn($builder)
+        ;
+
+        $builder
+            ->add('description', 'text', Argument::any())
             ->willReturn($builder)
         ;
 
         $this->buildForm($builder, array());
     }
 
-    function it_defines_data_class(OptionsResolverInterface $resolver)
+    function it_defines_assigned_data_class(OptionsResolverInterface $resolver)
     {
         $resolver
             ->setDefaults(array(
-                'data_class'        => 'Taxonomy',
+                'data_class'        => 'TaxonTranslation',
                 'validation_groups' => array('sylius'),
             ))
             ->shouldBeCalled()
