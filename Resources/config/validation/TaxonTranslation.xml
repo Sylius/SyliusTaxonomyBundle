@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
 
@@ -11,28 +11,7 @@
 
 -->
 
-<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
-                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                    xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
-                                        http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
-
-    <class name="Sylius\Component\Taxonomy\Model\Taxon">
-        <property name="translations">
-            <constraint name="Valid" />
-        </property>
-        <constraint name="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity">
-            <option name="fields">code</option>
-            <option name="message">sylius.taxon.code.unique</option>
-            <option name="groups">sylius</option>
-        </constraint>
-        <property name="code">
-            <constraint name="NotBlank">
-            <option name="message">sylius.taxon.code.not_blank</option>
-            <option name="groups">sylius</option>
-            </constraint>
-        </property>
-    </class>
-
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/services/constraint-mapping-1.0.xsd">
     <class name="Sylius\Component\Taxonomy\Model\TaxonTranslation">
         <property name="name">
             <constraint name="NotBlank">
@@ -54,5 +33,4 @@
             <option name="groups">sylius</option>
         </constraint>
     </class>
-
 </constraint-mapping>
