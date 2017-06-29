@@ -4,9 +4,7 @@
 sylius:
     form:
         taxon:
-            description: Beskrivelse
-            name: Navn
-            parent: Forelder
+            name: 名稱
             slug: Slug
         taxonomy:
-            name: Navn
+            name: 名稱
