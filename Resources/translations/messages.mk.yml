@@ -4,7 +4,8 @@
 sylius:
     form:
         taxon:
-            description: Mô tả
-            name: Tên
+            description: Опис
+            name: Име
+            parent: Родител
         taxonomy:
-            name: Tên
+            name: Име
