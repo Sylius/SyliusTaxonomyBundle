@@ -20,9 +20,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
 final class SyliusTaxonomyBundleTest extends KernelTestCase
 {
-    /**
-     * @test
-     */
+    #[\PHPUnit\Framework\Attributes\Test]
     public function its_services_are_initializable()
     {
         static::bootKernel();
