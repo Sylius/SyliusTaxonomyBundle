@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Sylius\Bundle\TaxonomyBundle\Tests\Functional;
 
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Assert;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\DependencyInjection\Container;
@@ -20,7 +21,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
 final class SyliusTaxonomyBundleTest extends KernelTestCase
 {
-    #[\PHPUnit\Framework\Attributes\Test]
+    #[Test]
     public function its_services_are_initializable()
     {
         static::bootKernel();
