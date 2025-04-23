@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Sylius\Bundle\TaxonomyBundle\Tests\Functional;
 
-use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\Assert;
+use PHPUnit\Framework\Attributes\Test;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\DependencyInjection\ContainerInterface;
