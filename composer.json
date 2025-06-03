@@ -63,7 +63,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Sylius\\Bundle\\TaxonomyBundle\\Tests\\": "tests/"
+            "Tests\\Sylius\\Bundle\\TaxonomyBundle\\": "tests/"
         },
         "files": [
             "Tests/Functional/app/AppKernel.php"

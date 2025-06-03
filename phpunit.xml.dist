@@ -10,7 +10,7 @@
 
     <testsuites>
         <testsuite name="sylius-taxonomy-bundle">
-            <directory>./Tests/</directory>
+            <directory>./tests/</directory>
         </testsuite>
     </testsuites>
 </phpunit>
