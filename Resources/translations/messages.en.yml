@@ -4,10 +4,10 @@
 sylius:
     form:
         taxon:
-            description: Description
-            enabled: Enabled
-            name: Name
-            parent: Parent
-            slug: Slug
+            description: '描述'
+            enabled: '启用'
+            name: '名称'
+            parent: '父级'
+            slug: 'Slug'
         taxonomy:
-            name: Name
+            name: '名称'
