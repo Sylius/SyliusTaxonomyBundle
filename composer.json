@@ -58,15 +58,15 @@
             "Sylius\\Bundle\\TaxonomyBundle\\": ""
         },
         "exclude-from-classmap": [
-            "/Tests/"
+            "/tests/"
         ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Sylius\\Bundle\\TaxonomyBundle\\Tests\\": "tests/"
+            "Tests\\Sylius\\Bundle\\TaxonomyBundle\\": "tests/"
         },
         "files": [
-            "Tests/Functional/app/AppKernel.php"
+            "tests/Functional/app/AppKernel.php"
         ]
     },
     "repositories": [

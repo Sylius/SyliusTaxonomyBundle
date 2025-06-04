@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Sylius\Bundle\TaxonomyBundle\Tests\Functional;
+namespace Tests\Sylius\Bundle\TaxonomyBundle\Functional;
 
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\Attributes\Test;
