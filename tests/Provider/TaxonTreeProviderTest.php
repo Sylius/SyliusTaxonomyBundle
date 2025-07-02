@@ -27,7 +27,9 @@ use Sylius\Component\Taxonomy\Repository\TaxonRepositoryInterface;
 final class TaxonTreeProviderTest extends TestCase
 {
     private TaxonRepositoryInterface $taxonRepository;
+
     private NestedTreeRepository $taxonTreeRepository;
+
     private TaxonTreeProvider $provider;
 
     protected function setUp(): void
