@@ -10,7 +10,7 @@ sylius:
             unique: 'Ein Taxon mit dem angegebenen Code existiert bereits.'
         name:
             max_length: 'Der Name des Taxons darf höchstens 255 Zeichen lang sein.'
-            not_blank: 'Bitte geben Sie den Namen des Taxons ein.'
+            not_blank: 'Bitte geben Sie den Taxon-Namen ein.'
         slug:
             not_blank: 'Bitte geben Sie den Taxon-Slug ein.'
             unique: 'Der Taxon-Slug muss eindeutig sein.'
