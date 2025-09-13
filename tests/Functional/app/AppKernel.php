@@ -11,11 +11,11 @@
 
 declare(strict_types=1);
 
-use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use BabDev\PagerfantaBundle\BabDevPagerfantaBundle;
 use Doctrine\Bundle\DoctrineBundle\DoctrineBundle;
-use Sylius\Bundle\TaxonomyBundle\SyliusTaxonomyBundle;
 use Sylius\Bundle\ResourceBundle\SyliusResourceBundle;
+use Sylius\Bundle\TaxonomyBundle\SyliusTaxonomyBundle;
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
