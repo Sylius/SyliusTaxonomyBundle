@@ -9,6 +9,8 @@ sylius:
         name:
             max_length: Ime taksona ne sme biti daljše od 255 znakov.
             not_blank: Prosimo, vnesite ime taksona.
+        parent:
+            is_invalid: 'Podrejenega taksona ni mogoče dodeliti kot nadrejenega taksona.'
     taxonomy:
         name:
             max_length: Ime taksonomije ne sme biti daljše od 255 znakov.

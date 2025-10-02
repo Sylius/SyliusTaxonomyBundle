@@ -38,5 +38,9 @@
 
         <service id="sylius.generator.taxon_slug" class="Sylius\Component\Taxonomy\Generator\TaxonSlugGenerator" />
         <service id="Sylius\Component\Taxonomy\Generator\TaxonSlugGeneratorInterface" alias="sylius.generator.taxon_slug" />
+
+        <service id="sylius.validator.taxon_parent" class="Sylius\Bundle\TaxonomyBundle\Validator\TaxonParentValidator">
+            <tag name="validator.constraint_validator" alias="sylius_taxon_parent_validator" />
+        </service>
     </services>
 </container>

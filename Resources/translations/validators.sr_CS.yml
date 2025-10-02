@@ -5,3 +5,5 @@ sylius:
     taxon:
         code:
             not_blank: Unesite taxon kod.
+        parent:
+            is_invalid: 'Није могуће доделити подређени таксон као надређени таксон.'
