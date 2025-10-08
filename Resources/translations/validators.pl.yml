@@ -14,7 +14,7 @@ sylius:
             not_blank: Wprowadź fragment URL kategorii.
             unique: Fragment URL kategorii musi być unikalny.
         parent:
-            is_invalid: 'Nie można przypisać potomnego taksonu jako taksonu nadrzędnego.'
+            invalid_relation: 'Rodzic nie może być ani tym samym taksonem, ani żadnym z jego potomków.'
     taxonomy:
         name:
             max_length: Nazwa taksonomii nie może być dłuższa niż 255 znaków.

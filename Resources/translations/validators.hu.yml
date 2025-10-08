@@ -14,7 +14,7 @@ sylius:
             not_blank: Kérem adja meg a taxon url kompatibilis megnevezését.
             unique: A taxon url kompatibilis megnevezésének egyedinek kell lennie.
         parent:
-            is_invalid: 'Egy alárendelt taxont nem lehet szülő taxonként hozzárendelni.'
+            invalid_relation: 'A szülő nem lehet sem maga a taxon, sem annak bármely leszármazottja.'
     taxonomy:
         name:
             max_length: A taxonómia neve nem lehet hosszabb 255 karakternél.

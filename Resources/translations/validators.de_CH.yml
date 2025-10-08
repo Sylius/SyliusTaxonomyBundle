@@ -14,7 +14,7 @@ sylius:
             not_blank: Bitte eine Kategorie SEO-URL angeben.
             unique: SEO-URL der Kategorie muss eindeutig sein.
         parent:
-            is_invalid: 'Ein untergeordneter Taxon kann nicht als übergeordneter Taxon zugewiesen werden.'
+            invalid_relation: 'Der übergeordnete Taxon darf weder der Taxon selbst noch einer seiner Nachkommen sein.'
     taxonomy:
         name:
             max_length: Name darf nicht länger als 255 Zeichen sein.

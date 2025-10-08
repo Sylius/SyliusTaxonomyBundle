@@ -14,7 +14,7 @@ sylius:
             not_blank: กรุณาใส่ Slug
             unique: Slug ต้องไม่ซ้ำกัน
         parent:
-            is_invalid: 'ไม่สามารถกำหนด taxon ลูกเป็น taxon พ่อแม่ได้'
+            invalid_relation: 'พ่อแม่ต้องไม่เป็นแท็กซอนเดียวกันหรือเป็นลูกหลานของมัน'
     taxonomy:
         name:
             max_length: ชื่อหมวดหมู่ต้องมีความยาวไม่เกิน 255 ตัวอักษร

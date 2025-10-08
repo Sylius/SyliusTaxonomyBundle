@@ -11,7 +11,7 @@ sylius:
             max_length: O nome do táxon não deve ter mais que 255 caracteres.
             not_blank: Por favor, digite o nome do táxon.
         parent:
-            is_invalid: 'Não é possível atribuir um táxon filho como táxon pai.'
+            invalid_relation: 'O pai não pode ser o próprio táxon nem qualquer um dos seus descendentes.'
     taxonomy:
         name:
             max_length: O nome da taxonomia não deve ter mais que 255 caracteres.

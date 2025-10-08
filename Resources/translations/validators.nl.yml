@@ -14,7 +14,7 @@ sylius:
             not_blank: Gelieve een korte naam in te vullen.
             unique: Taxon korte naam moet uniek zijn.
         parent:
-            is_invalid: 'U kunt geen kindtaxon toewijzen als een oudertaxis.'
+            invalid_relation: 'De ouder mag niet het taxon zelf of een van zijn afstammelingen zijn.'
     taxonomy:
         name:
             max_length: Taxonomienaam mag niet langer zijn dan 255 karakters.

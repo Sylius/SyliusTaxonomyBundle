@@ -14,7 +14,7 @@ sylius:
             not_blank: Silahkan masukkan siput tanpa pamrih.
             unique: Siput taksi harus unik.
         parent:
-            is_invalid: 'Anda tidak dapat menetapkan takson anak sebagai takson induk.'
+            invalid_relation: 'Induk tidak boleh merupakan takson itu sendiri atau keturunannya.'
     taxonomy:
         name:
             max_length: Nama taksonomi tidak boleh lebih dari 255 karakter.

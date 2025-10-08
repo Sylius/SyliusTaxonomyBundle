@@ -15,13 +15,13 @@ namespace Sylius\Bundle\TaxonomyBundle\Validator\Constraints;
 
 use Symfony\Component\Validator\Constraint;
 
-final class TaxonParent extends Constraint
+final class TaxonParentRelation extends Constraint
 {
-    public string $message = 'sylius.taxon.parent.is_invalid';
+    public string $message = 'sylius.taxon.parent.invalid_relation';
 
     public function validatedBy()
     {
-        return 'sylius_taxon_parent_validator';
+        return 'sylius_taxon_parent_relation_validator';
     }
 
     public function getTargets(): string

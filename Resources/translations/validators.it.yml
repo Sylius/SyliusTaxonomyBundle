@@ -14,7 +14,7 @@ sylius:
             not_blank: Inserisci lo il SEO-URL della classe tassa
             unique: Il SEP-URL della classe tassa deve essere unico.
         parent:
-            is_invalid: 'Non è possibile assegnare un taxon figlio come taxon genitore.'
+            invalid_relation: 'Il genitore non può essere né il taxon stesso né uno dei suoi discendenti.'
     taxonomy:
         name:
             max_length: Il nome della tassonomia non deve essere più lungo di 255 caratteri.

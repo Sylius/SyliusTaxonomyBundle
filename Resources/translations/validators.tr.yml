@@ -14,7 +14,7 @@ sylius:
             not_blank: Lütfen kategori harf dizisi girin.
             unique: Sınıf kütle birimi benzersiz olmalıdır.
         parent:
-            is_invalid: 'Bir alt taksonu üst takson olarak atayamazsınız.'
+            invalid_relation: 'Üst takson ne kendisi ne de onun alt taksonlarından biri olabilir.'
     taxonomy:
         name:
             max_length: Sınıflandırma adı 255 karakterden uzun olamaz.

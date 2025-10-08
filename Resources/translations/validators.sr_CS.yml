@@ -6,4 +6,4 @@ sylius:
         code:
             not_blank: Unesite taxon kod.
         parent:
-            is_invalid: 'Није могуће доделити подређени таксон као надређени таксон.'
+            invalid_relation: 'Родитељ не може бити ни сам таксон ни било који од његових потомака.'

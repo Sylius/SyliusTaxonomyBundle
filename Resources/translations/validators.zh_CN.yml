@@ -14,7 +14,7 @@ sylius:
             not_blank: 请输入分类标识。
             unique: 分类标识必须是唯一的。
         parent:
-            is_invalid: '不能将子分类指定为父分类。'
+            invalid_relation: '父分类不能是该分类本身或其任何子分类。'
     taxonomy:
         name:
             max_length: 分类名称不能超过 255 个字符。

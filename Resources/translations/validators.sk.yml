@@ -14,7 +14,7 @@ sylius:
             not_blank: Prosím, zadajte "slug" kategórie.
             unique: '"Slug" kategórie musí byť jedinečný.'
         parent:
-            is_invalid: 'Nie je možné priradiť podriadený taxón ako nadradený taxón.'
+            invalid_relation: 'Rodič nemôže byť ani samotný taxón, ani ktorýkoľvek z jeho potomkov.'
     taxonomy:
         name:
             max_length: Názov triedenia nesmie byť dlhší ako 255 znakov.

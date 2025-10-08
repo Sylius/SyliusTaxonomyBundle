@@ -15,7 +15,7 @@ sylius:
             not_blank: Please enter taxon slug.
             unique: Taxon slug must be unique.
         parent:
-            is_invalid: 'You cannot assign a child taxon as a parent taxon.'
+            invalid_relation: 'Parent must neither be the taxon itself nor any of its descendants'
     taxonomy:
         name:
             max_length: Taxonomy name must not be longer than 255 characters.
