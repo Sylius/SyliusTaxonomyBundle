@@ -7,7 +7,7 @@ sylius:
             description: 'Beschreibung'
             enabled: 'Aktiviert'
             name: 'Name'
-            parent: 'Übergeordnete Kategorie'
+            parent: 'Übergeordnet'
             slug: 'Slug'
         taxonomy:
             name: 'Name'

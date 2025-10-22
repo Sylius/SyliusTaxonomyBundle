@@ -4,7 +4,6 @@
 sylius:
     taxon:
         code:
-            max_length: Le code ne doit pas dépasser {{ limit }} caractères.
             not_blank: Veuillez entrer le code de taxon.
             regex: Le code du taxon ne peut être constitué que de lettres, nombres, tirets et traits de soulignement.
             unique: Ce code de taxon existe déjà.
@@ -14,9 +13,12 @@ sylius:
         slug:
             not_blank: Veuillez entrer le slug du taxon.
             unique: Le slug du taxon doit être unique.
-        parent:
-            invalid_relation: 'Le parent ne doit être ni le taxon lui-même ni l’un de ses descendants.'
     taxonomy:
         name:
             max_length: La taxonomie ne peux dépasser les 255 caractères.
             not_blank: Veuillez saisir un nom pour la taxonomie.
+    translation:
+        locale:
+            not_blank: Vous devez entrer une valeur.
+            invalid: Ce paramètre régional n'est pas valide.
+            unique: Une traduction pour la locale {{ value }} existe déjà.
